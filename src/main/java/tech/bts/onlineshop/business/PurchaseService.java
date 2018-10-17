@@ -1,9 +1,7 @@
 package tech.bts.onlineshop.business;
 
-import tech.bts.onlineshop.model.Product;
+import tech.bts.onlineshop.model.CartItem;
 import tech.bts.onlineshop.model.ShoppingCart;
-
-import java.util.List;
 
 public class PurchaseService {
 
@@ -13,6 +11,12 @@ public class PurchaseService {
      */
     public double calculateTotalAmount(ShoppingCart cart) {
 
-        return 0;
+        double total = 0;
+
+        for (CartItem item : cart.getItems()) {
+            total += (item.getProduct().getPrice() * item.getQuantity());
+        }
+
+        return total;
     }
 }

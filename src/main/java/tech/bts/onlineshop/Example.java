@@ -12,9 +12,9 @@ public class Example {
 
     public static void main(String[] args) {
 
-        Product p1 = new Product("macbook", 1500);
-        Product p2 = new Product("iphone xs",1200);
-        Product p3 = new Product("pixel 3", 900);
+        Product p1 = new Product("Macbook", 1500);
+        Product p2 = new Product("Iphone xs",1200);
+        Product p3 = new Product("Pixel 3", 900);
 
         List<CartItem> items = new ArrayList<>();
         items.add(new CartItem(p1, 2) );
@@ -25,6 +25,5 @@ public class Example {
 
         PurchaseService purchaseService = new PurchaseService();
         purchaseService.calculateTotalAmount(cart);
-
     }
 }
